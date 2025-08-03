@@ -13,6 +13,82 @@ pnpm dev
 # or
 bun dev
 ```
+# Blog Shofi
+
+Platform blog modern yang dibangun dengan Next.js 14, TypeScript, dan Neon PostgreSQL.
+
+## Fitur
+
+- ✅ Authentication dengan NextAuth.js
+- ✅ CRUD Posts dengan editor sederhana
+- ✅ CRUD Comments dengan sistem diskusi
+- ✅ Dashboard untuk mengelola artikel
+- ✅ Responsive design dengan Tailwind CSS
+- ✅ Integrasi gambar dari Unsplash
+- ✅ Database PostgreSQL dengan Neon
+- ✅ Deploy-ready untuk Vercel
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Database:** Neon PostgreSQL
+- **ORM:** Drizzle ORM
+- **Authentication:** NextAuth.js
+- **Styling:** Tailwind CSS + shadcn/ui
+- **Language:** TypeScript
+
+## Setup Development
+
+1. Clone repository dan install dependencies:
+```bash
+git clone <repository-url>
+cd blog-shofi
+pnpm install
+```
+
+2. Setup environment variables:
+```bash
+cp .env.example .env.local
+# Edit .env.local dengan konfigurasi Anda
+```
+
+3. Setup database:
+```bash
+pnpm db:push
+```
+
+4. Jalankan development server:
+```bash
+pnpm dev
+```
+
+## Deployment ke Vercel
+
+1. Push kode ke GitHub
+2. Import project di Vercel
+3. Set environment variables di Vercel dashboard
+4. Deploy
+
+## Struktur Folder
+
+```
+src/
+├── app/                 # App Router pages
+├── components/          # React components
+├── lib/                # Utility functions
+│   ├── db/             # Database schema & connection
+│   ├── auth.ts         # NextAuth configuration
+│   └── utils.ts        # Helper functions
+└── middleware.ts       # Route protection
+```
+
+## Contributing
+
+1. Fork repository
+2. Buat feature branch
+3. Commit changes
+4. Push ke branch
+5. Buat Pull Request
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
